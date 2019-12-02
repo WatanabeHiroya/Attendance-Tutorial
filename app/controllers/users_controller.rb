@@ -7,7 +7,12 @@ class UsersController < ApplicationController
   before_action :admin_or_correct_user, only: [:show]
 
   def index
+    if params[:user][:search_name]
+      @users = User.search(params[:user][:search_name])
+    end
+    
     @users = User.paginate(page: params[:page])
+    
   end
 
   def show
@@ -58,6 +63,7 @@ class UsersController < ApplicationController
     end
     redirect_to users_url
   end
+
 
   private
 
