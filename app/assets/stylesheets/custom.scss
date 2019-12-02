@@ -97,8 +97,18 @@ p {
   }
 }
 
-/* モーダルウインドウの位置調整*/
+// モーダルウインドウの位置調整
 
 .modal-dialog-center {
   padding-top: 10%;
+}
+
+// 曜日の配色
+
+.days_color-0 {
+  color: #00f;
+}
+
+.days_color-6 {
+  color: #f00;
 }
