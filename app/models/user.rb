@@ -51,8 +51,9 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
   
-  def self.search(search_name)
-    return User.all unless search_name
-    User.where(['name LIKE ?', "%#{search_name}"])
-  end
+#  def self.search(search)
+#   return User.all unless search
+#    User.where(['name LIKE ?', "%#{search}"])
+#  end
+
 end
