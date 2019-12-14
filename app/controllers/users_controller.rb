@@ -75,8 +75,8 @@ class UsersController < ApplicationController
 
    def query
      if params[:user].present? && params[:user][:name]
-       User.where('LOWER(name) LIKE ?', "%#{params[:user][:name].downcase}%")
-      # User.where('name LIKE ?', "%#{params[:user][:name]}%" )
+     #  User.where('LOWER(name) LIKE ?', "%#{params[:user][:name].downcase}%")
+       User.where('name LIKE ?', "%#{params[:user][:name]}%")
      else
        User.all
      end
