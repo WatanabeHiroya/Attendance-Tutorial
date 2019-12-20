@@ -9,7 +9,7 @@
   <%= form_with(url: users_path, method: :get, local: true) do |f| %>
     <%= f.label :name, "ユーザー名検索" %>
     <div class="form_edit_flex">
-      <%= f.text_field :search, value: (params[:search] if params[:search]), class: "form-control" %>
+      <%= f.text_field :search, value: (params[:search] if params[:search]), class: "form-control search-form" %>
       <%= f.submit "検索", :name => nil, class: "btn btn-primary btn-block" %>
     </div>
   <% end %>
