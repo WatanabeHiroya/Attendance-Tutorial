@@ -43,8 +43,12 @@
   margin-top: 10px;
 }
 
-.form-edit {
-  display:　inline;
+.form-control {
+  width: 150px;
+}
+
+.form_edit_flex {
+  display: inline-flex;
 }
 
 /* ユーザー一覧ページ */
