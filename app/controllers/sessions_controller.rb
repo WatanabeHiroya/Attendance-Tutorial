@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :before_new, only: [:new]
+  
   def new
   end
   
