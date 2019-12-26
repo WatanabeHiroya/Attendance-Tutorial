@@ -15,7 +15,8 @@ module AttendancesHelper
   def working_times(start, finish)
     format("%.2f", (((finish - start) / 60) /60.0))
   end
-  
+
+  # 出社時間、退社時間のどちらか一方が空の時、falseを返す。  
   def attendances_invalid?
     attendances = true
     attendances_params.each do |id, item|
